@@ -1,0 +1,542 @@
+/* --- GOOGLE FONTS --- */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600&display=swap");
+
+/* --- VARIABLE DEFINITIONS --- */
+:root {
+  --soft-pink: #ffd1dc;
+  --peach: #ffe5b4;
+  --rose-gold: #b76e79;
+  --deep-rose: #965a63;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --transition: all 0.3s ease-in-out;
+}
+
+/* --- RESET & GLOBAL STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- ANNOUNCEMENT BAR --- */
+.announcement-bar {
+  background-color: var(--rose-gold);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.announcement-bar a {
+  color: var(--peach);
+  text-decoration: underline;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--soft-pink);
+  position: sticky;
+  top: 38px; /* Height of announcement bar */
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  color: var(--rose-gold);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--rose-gold);
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* --- GRAPHIC BASKET STYLE --- */
+.basket-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.basket-svg {
+  width: 28px; /* Size of the bag */
+  height: 28px;
+  color: var(--rose-gold); /* Using your theme color */
+  transition: transform 0.2s ease;
+}
+
+.basket-link:hover .basket-svg {
+  transform: scale(1.1); /* Slight pop on hover */
+  color: var(--deep-rose);
+}
+
+.basket-count {
+  position: absolute;
+  top: -5px; /* Moves bubble up */
+  right: -8px; /* Moves bubble right */
+  background-color: var(--rose-gold);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Makes it a perfect circle */
+  border: 2px solid white; /* Adds that "sticker" look */
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+
+.promo-banner {
+    background: var(--peach);
+    color: var(--deep-rose);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--soft-pink);
+    font-weight: 600;
+}
+.hero {
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.2); /* Softens the image for text readability */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* --- BUTTONS --- */
+.btn-luxe {
+  background: var(--rose-gold);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.btn-luxe:hover {
+  background: var(--peach);
+  color: var(--deep-rose);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--rose-gold);
+}
+
+/* --- FEATURES SECTION --- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 80px 10%;
+  background: linear-gradient(to bottom, var(--white), var(--peach));
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(183, 110, 121, 0.1);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-img {
+  height: 250px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Use these as placeholders - add your own images later */
+.hair-img {
+  background-image: url("https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80");
+}
+.glow-img {
+  background-image: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80");
+}
+.products-img {
+  background-image: url("https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=500&q=80");
+}
+
+.feature-card h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.8rem;
+  color: var(--rose-gold);
+}
+
+.feature-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--deep-rose);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rose-gold);
+}
+
+/* --- NEWSLETTER --- */
+.newsletter-section {
+  padding: 80px 10%;
+  text-align: center;
+  background: var(--white);
+}
+
+.newsletter-box {
+  background: var(--soft-pink);
+  padding: 60px;
+  border-radius: 30px;
+  border: 5px solid white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-box h2 {
+  font-size: 2.5rem;
+  font-family: "Dancing Script", cursive;
+  color: var(--deep-rose);
+}
+
+.newsletter-box form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter-box input {
+  padding: 15px 25px;
+  width: 300px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+/* --- TESTIMONIALS & BRANDS (Requirement 6) --- */
+.client-requirements-section {
+    padding: 60px 10%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--deep-rose);
+    padding: 20px;
+    border-left: 4px solid var(--rose-gold);
+    background: var(--soft-pink);
+    border-radius: 0 15px 15px 0;
+}
+
+.partner-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.partner-btn {
+    text-decoration: none;
+    color: var(--rose-gold);
+    border: 2px solid var(--rose-gold);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.partner-btn:hover {
+    background: var(--rose-gold);
+    color: white;
+}
+/* --- FOOTER --- */
+footer {
+  background: #222;
+  color: white;
+  padding: 60px 10% 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-links a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  color: #888;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.social-btn {
+    color: var(--rose-gold);
+    transition: 0.3s;
+}
+.social-btn:hover {
+    color: var(--deep-rose);
+    transform: translateY(-3px);
+}
+
+/* --- RESPONSIVE MOBILE MENU --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Controlled by JS */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .newsletter-box form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-box input {
+    width: 100%;
+  }
+}
+
+/* Add this to index.css */
+@keyframes bagShake {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.basket-svg.animate {
+  animation: bagShake 0.4s ease;
+}
+/* --- ABOUT CHLOE SECTION --- */
+.about-chloe {
+    padding: 80px 10%;
+    background-color: var(--white);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Important for Mobile Responsiveness (M3) */
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px var(--peach); /* Trendy offset background shadow */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.about-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    font-weight: 600;
+    color: var(--rose-gold);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text h2 {
+        text-align: center;
+    }
+}
+
+.basket-item, .summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grand-total {
+    color: #D4AF37;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}

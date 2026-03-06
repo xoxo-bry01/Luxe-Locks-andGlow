@@ -1,0 +1,120 @@
+.basket-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 5%;
+  min-height: 60vh;
+}
+
+.basket-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: var(--rose-gold);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.basket-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- ITEM CARDS --- */
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--soft-pink);
+  box-shadow: 0 5px 15px rgba(183, 110, 121, 0.05);
+}
+
+.item-details h4 {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.item-details p {
+  color: var(--rose-gold);
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid var(--soft-pink);
+  color: var(--deep-rose);
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.remove-btn:hover {
+  background: var(--soft-pink);
+  color: white;
+}
+
+/* --- SUMMARY BOX --- */
+.order-summary {
+  background: var(--peach);
+  padding: 30px;
+  border-radius: 20px;
+  position: sticky;
+  top: 120px;
+  border: 3px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary h3 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(183, 110, 121, 0.2);
+  padding-bottom: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-weight: 400;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 25px;
+  color: var(--deep-rose);
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.secure-text {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 15px;
+  color: #888;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 850px) {
+  .basket-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .basket-title {
+    font-size: 2.2rem;
+  }
+
+  .order-summary {
+    position: static;
+  }
+}

@@ -1,0 +1,131 @@
+.shop-header {
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(to bottom, var(--soft-pink), var(--white));
+  }
+  
+  .shop-header h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5rem;
+    color: var(--rose-gold);
+    margin-bottom: 10px;
+  }
+  
+  /* Filter Bar */
+  .filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .filter-btn {
+    padding: 8px 25px;
+    border: 1px solid var(--soft-pink);
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: var(--rose-gold);
+    color: white;
+    border-color: var(--rose-gold);
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 0 10% 80px;
+  }
+  
+  .product-card {
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #f9f9f9;
+    aspect-ratio: 1 / 1.2;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  /* Slide-up Quick Add */
+  .quick-add {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    background: rgba(183, 110, 121, 0.9);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: bottom 0.3s ease;
+  }
+  
+  .product-card:hover .quick-add {
+    bottom: 0;
+  }
+  
+  .product-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .product-info {
+    padding-top: 20px;
+  }
+  
+  .product-info .category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--rose-gold);
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  
+  .product-info h3 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    font-weight: 500;
+  }
+  
+  .product-info .price {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 0 5% 40px;
+    }
+  
+    .shop-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .quick-add {
+      bottom: 0; /* Keep visible on mobile since there's no hover */
+      background: var(--rose-gold);
+    }
+  }
+  

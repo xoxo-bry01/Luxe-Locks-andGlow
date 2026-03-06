@@ -1,0 +1,28 @@
+.checkout-container {
+  padding: 60px 10%;
+  background: #fff;
+}
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+}
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-group label {
+  font-size: 0.8rem;
+  color: var(--rose-gold);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.checkout-summary {
+  background: var(--peach);
+  padding: 30px;
+  border-radius: 20px;
+}

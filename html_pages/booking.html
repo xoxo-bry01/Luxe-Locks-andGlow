@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Glow | Luxe Locs & Glow</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../css_pages/booking.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Luxe Locs & Glow</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="booking.html" class="active">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <span
+          id="user-greeting"
+          onclick="window.location.href='../html_pages/login.html'"
+          style="cursor: pointer"
+          >Login / Signup</span
+        >
+        <div class="basket-icon-wrapper">
+          <a href="../html_pages/basket.html" class="basket-link">
+            <svg
+              class="basket-svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 01-8 0"></path>
+            </svg>
+            <span class="basket-count">0</span>
+          </a>
+        </div>
+        <div class="hamburger">☰</div>
+      </div>
+    </nav>
+
+    <main class="booking-container">
+      <div class="booking-card">
+        <div class="booking-header">
+          <h1>Reserve Your Experience</h1>
+          <p>Self-care starts with a single click.</p>
+        </div>
+
+        <form id="bookingForm" class="luxe-form">
+          <div class="form-section">
+            <label for="service">What are we doing today?</label>
+            <select id="service" required>
+              <option value="" disabled selected>Select a treatment...</option>
+              <optgroup label="Hair Artistry">
+                <option value="silk-press">Signature Silk Press</option>
+                <option value="balayage">Rose Gold Balayage</option>
+                <option value="braids">Boho Braids</option>
+              </optgroup>
+              <optgroup label="Aesthetic Glow">
+                <option value="facial">Hydra-Glow Facial</option>
+                <option value="makeup">Full Glam Artistry</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-section">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="form-section">
+              <label for="time">Preferred Time</label>
+              <select id="time" required>
+                <option value="09:00">09:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label for="name">Your Full Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="E.g. Bella Hadid"
+              required
+            />
+          </div>
+
+          <div class="form-section">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="07123 456 789" required />
+          </div>
+
+          <div class="form-section">
+            <label for="notes">Special Requests (Optional)</label>
+            <textarea
+              id="notes"
+              rows="3"
+              placeholder="Tell us about your hair type or skin concerns..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-luxe full-width">
+            Confirm Reservation
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <section class="newsletter-section">
+      <div class="newsletter-box">
+        <h2>Join the Inner Circle</h2>
+        <p>Get exclusive beauty tips and early access to bookings.</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn-luxe">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="logo">Luxe Locs & Glow</h2>
+          <p>Est. 2024. Your beauty, our passion.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="../html_pages/booking.html">Booking Policy</a>
+          <a href="../html_pages/contact.html">Find Us</a>
+          <a href="../html_pages/gallery.html">Portfolio</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Luxe Locs & Glow | Designed for Excellence
+      </div>
+    </footer>
+
+    <script src="../js_pages/script.js"></script>
+  </body>
+</html>
