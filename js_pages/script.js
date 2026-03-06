@@ -156,3 +156,25 @@ renderBasket();
 if (window.location.pathname.includes("checkout.html")) {
     renderCheckoutSummary();
 }
+
+function filterProducts(category, button) {
+    // 1. Handle button highlighting
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // 2. Filter the cards
+    const cards = document.querySelectorAll('.product-card');
+    
+    cards.forEach(card => {
+        // Find the category text inside the card
+        const cardCategory = card.querySelector('.category').textContent;
+
+        if (category === 'all' || cardCategory === category) {
+            card.style.display = 'block'; // Show
+            card.style.opacity = '1';
+        } else {
+            card.style.display = 'none'; // Hide
+        }
+    });
+}

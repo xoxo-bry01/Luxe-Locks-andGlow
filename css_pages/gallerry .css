@@ -59,3 +59,32 @@
 
 .gallery-item:hover .overlay { opacity: 1; }
 .gallery-item:hover img { transform: scale(1.1); }
+
+/* --- GALLERY MOBILE FIX --- */
+@media (max-width: 768px) {
+    .gallery-container {
+        display: flex;
+        flex-direction: column; /* Stacks images on top of each other */
+        gap: 20px;
+    }
+
+    .gallery-item {
+        width: 100% !important; /* Takes up full phone width */
+        height: auto !important; /* Stops the "tiny line" shrinking */
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 300px; /* Gives them a nice consistent height on phone */
+        object-fit: cover;
+    }
+
+    /* FIXING THE HOVER LABELS */
+    /* Since phones can't hover, we make the labels always visible or visible on tap */
+    .gallery-item .overlay {
+        opacity: 1 !important; /* Make "Boho Braids" etc. always visible on mobile */
+        background: rgba(0, 0, 0, 0.4); /* Light tint so you can see text over image */
+        position: relative;
+        padding: 10px;
+    }
+}
