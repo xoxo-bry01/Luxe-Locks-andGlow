@@ -1,13 +1,19 @@
 /* --- CONTACT PAGE SPECIFIC STYLES --- */
 
 .contact-wrapper {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
+  /* Use a massive padding-top just to see if it moves */
+  padding-top: 150px !important; 
+  margin-top: 0 !important;
   min-height: 80vh;
   gap: 40px;
-  padding: 60px 10%;
-  background: linear-gradient(to bottom, #ffffff, #ffe5b4);
   box-sizing: border-box;
+}
+
+/* Also, ensure the section below the nav has enough room */
+main {
+  margin-top: 80px; /* Adjust this to your navbar's height */
 }
 
 .contact-info {
@@ -66,11 +72,13 @@
 @media (max-width: 992px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
-    padding: 20px 5%;
+    /* This adds 20px of space on the left and right so it doesn't touch the edge */
+    padding: 120px 20px 40px 20px !important; 
+    text-align: center;
   }
-  
+
   .contact-info h1 {
     font-size: 2.5rem;
-    text-align: center;
+    margin-left: 0; /* Ensures it stays centered */
   }
 }
