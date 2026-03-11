@@ -1,3 +1,5 @@
+/* --- INDEX.CSS --- */
+/* --- LUXE LOCKS & GLOW main* STYLESHEET --- */
 /* --- GOOGLE FONTS --- */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600&display=swap");
 
@@ -174,6 +176,7 @@ body {
 }
 
 .hero-content h1 {
+  color: #000;
   font-size: 4rem;
   font-family: "Dancing Script", cursive;
   margin-bottom: 20px;
@@ -260,7 +263,7 @@ body {
 
 /* Use these as placeholders - add your own images later */
 .hair-img {
-  background-image: url("https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80");
+  background-image: url("https://media.beautycon.com/vzfhnuaggt/uploads/2023/11/332909388_224423466713805_4663168479502762349_n.jpg?auto=format&fit=crop&w=500&q=80");
 }
 .glow-img {
   background-image: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80");

@@ -1,3 +1,18 @@
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--rose-gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--deep-rose);
+    transform: translateX(-5px); /* Cute little arrow nudge */
+}
+
 .checkout-container {
   padding: 60px 10%;
   background: #fff;
@@ -25,4 +40,41 @@
   background: var(--peach);
   padding: 30px;
   border-radius: 20px;
+}
+
+/* --- LUXE INPUT STYLING --- */
+.checkout-form input, 
+.checkout-form select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--soft-pink); /* Subtle pink border */
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  background-color: #fffafb; /* Very light pink tint */
+  transition: var(--transition);
+  outline: none;
+}
+
+/* The "Glow" effect when you click to type */
+.checkout-form input:focus {
+  border-color: var(--rose-gold);
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.2);
+  background-color: #fff;
+}
+
+/* --- RESPONSIVENESS (The D2 Fix) --- */
+@media (max-width: 992px) {
+  .checkout-container {
+    padding: 120px 5% 40px; /* Pushes it down so the nav doesn't hide it */
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr; /* Stacks the form on top of the summary */
+    gap: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Stacks side-by-side inputs (like First/Last name) */
+  }
 }

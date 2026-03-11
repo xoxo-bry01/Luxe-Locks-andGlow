@@ -178,3 +178,73 @@ function filterProducts(category, button) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Target your specific form ID
+    const bookingForm = document.getElementById('bookingForm');
+
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            // 2. Prevent the page from refreshing
+            e.preventDefault();
+
+            // 3. Grab the data from your specific IDs
+            const customerName = document.getElementById('name').value;
+            const selectedService = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+
+            // 4. Transform the form into a luxury confirmation message
+            // We target the parent 'booking-card' to replace the whole interface
+            const bookingCard = document.querySelector('.booking-card');
+            
+            bookingCard.innerHTML = `
+                <div style="text-align: center; padding: 50px 20px; animation: fadeIn 0.8s ease-out;">
+                    <div style="font-size: 50px; margin-bottom: 20px;">✨</div>
+                    <h1 style="font-family: 'Dancing Script', cursive; color: #b76e79;开启 font-size: 3rem; margin-bottom: 15px;">
+                        Reservation Confirmed!
+                    </h1>
+                    <p style="font-size: 1.2rem; color: #555; line-height: 1.6;">
+                        Thank you, <strong>${customerName}</strong>.<br>
+                        We have received your request for a <strong>${selectedService}</strong>.
+                    </p>
+                    <div style="margin: 25px auto; width: 50px; height: 2px; background: #ffd1dc;"></div>
+                    <p style="font-style: italic; color: #888;">
+                        Chloe will contact you shortly to finalize your appointment details.
+                    </p>
+                    <button onclick="window.location.reload()" class="btn-luxe" style="margin-top: 30px; cursor: pointer;">
+                        Make Another Booking
+                    </button>
+                </div>
+            `;
+            
+            // Scroll to top so they see the message
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
+
+// --- NEWSLETTER FORM FIX ---
+const newsletterForm = document.getElementById('newsletter-form');
+
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get the email address the user typed
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput ? emailInput.value : "there";
+
+        // Replace JUST the form with a sleek success message
+        newsletterForm.innerHTML = `
+            <div style="padding: 20px; animation: fadeIn 0.5s ease; color: #b76e79; font-weight: bold; background: rgba(183, 110, 121, 0.1); border-radius: 10px;">
+                <span>✨ You're in! Check ${email} for your welcome glow-up.</span>
+            </div>
+        `;
+    });
+}
+
+// --- AUTO-UPDATING COPYRIGHT YEAR ---
+// This finds the span and puts the current year (2026) inside it
+const yearSpan = document.getElementById('current-year');
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+}
